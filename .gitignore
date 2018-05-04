@@ -5,3 +5,9 @@
 *.log
 *.lot
 *.out
+*blx.bib
+*.xdv
+*.run.xml
+*.synctex.gz
+/.vscode
+*.DS_Store
