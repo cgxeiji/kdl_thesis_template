@@ -1,17 +1,15 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Masters/Doctoral Thesis 
+% Masters/Doctoral Thesis for the Kansei Design Laboratory
 % LaTeX Template
-% Version 2.5 (27/8/17)
+% Version 1.0 (2018/05/04)
 %
-% This template was downloaded from:
-% http://www.LaTeXTemplates.com
-%
-% Version 2.x major modifications by:
-% Vel (vel@latextemplates.com)
+% Version 1.x major modifications by:
+% Eiji Onchi (eiji@onchi.me)
 %
 % This template is based on a template by:
 % Steve Gunn (http://users.ecs.soton.ac.uk/srg/softwaretools/document/templates/)
 % Sunil Patel (http://www.sunilpatel.co.uk/thesis-template/)
+% Vel (http://www.LaTeXTemplates.com)
 %
 % Template license:
 % CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
@@ -35,7 +33,7 @@ nolistspacing, % If the document is onehalfspacing or doublespacing, uncomment t
 %nohyperref, % Uncomment to not load the hyperref package
 headsepline, % Uncomment to get a line under the header
 %chapterinoneline, % Uncomment to place the chapter title next to the number on one line
-%consistentlayout, % Uncomment to change the layout of the declaration, abstract and acknowledgements pages to match the default layout
+consistentlayout, % Uncomment to change the layout of the declaration, abstract and acknowledgements pages to match the default layout
 ]{MastersDoctoralThesis} % The class file specifying the document structure
 
 \usepackage[utf8]{inputenc} % Required for inputting international characters
@@ -67,19 +65,19 @@ headsepline, % Uncomment to get a line under the header
 %	THESIS INFORMATION
 %----------------------------------------------------------------------------------------
 
-\thesistitle{Thesis Title} % Your thesis title, this is used in the title and abstract, print it elsewhere with \ttitle
-\supervisor{PhD. Professor \textsc{Advisor}} % Your supervisor's name, this is used in the title page, print it elsewhere with \supname
+\thesistitle{This is the Title of my Amazing Thesis that will Blow your Mind} % Your thesis title, this is used in the title and abstract, print it elsewhere with \ttitle
+\supervisor{PhD. Seung Hee \textsc{Lee}} % Your supervisor's name, this is used in the title page, print it elsewhere with \supname
 \examiner{} % Your examiner's name, this is not currently used anywhere in the template, print it elsewhere with \examname
-\degree{Master's Degree/Doctor of Philosophy} % Your degree name, this is used in the title page and abstract, print it elsewhere with \degreename
+\degree{Doctor of Philosophy} % or Master's Degree. This is used in the title page and abstract, print it elsewhere with \degreename
 \author{Tarou \textsc{Tsukuba}} % Your name, this is used in the title page and abstract, print it elsewhere with \authorname
 \addresses{} % Your address, this is not currently used anywhere in the template, print it elsewhere with \addressname
 
-\subject{Kansei, Behavioral, and Brain Sciences} % Your subject area, this is not currently used anywhere in the template, print it elsewhere with \subjectname
-\keywords{} % Keywords for your thesis, this is not currently used anywhere in the template, print it elsewhere with \keywordnames
+\subject{Kansei Design Studies} % or Kansei Science (for Master's Program). This is not currently used anywhere in the template, print it elsewhere with \subjectname
+\keywords{thesis, amazing, topic, kansei} % Keywords for your thesis, this is not currently used anywhere in the template, print it elsewhere with \keywordnames
 \university{\href{http://www.tsukuba.ac.jp}{University of Tsukuba}} % Your university's name and URL, this is used in the title page and abstract, print it elsewhere with \univname
-\department{\href{http://www.chs.tsukuba.ac.jp}{Graduate School of Comprehensive Human Sciences}} % Your department's name and URL, this is used in the title page and abstract, print it elsewhere with \deptname
-\group{\href{http://researchgroup.university.com}{Kansei Design Laboratory}} % Your research group's name and URL, this is used in the title page, print it elsewhere with \groupname
-\faculty{\href{http://www.kansei.tsukuba.ac.jp}{Department of Kansei, Behavioral, and Brain Sciences}} % Your faculty's name and URL, this is used in the title page and abstract, print it elsewhere with \facname
+\department{\href{http://www.chs.tsukuba.ac.jp}{Graduate School of Comprehensive Human Sciences}} % This is used in the title page and abstract, print it elsewhere with \deptname
+\group{\href{http://www.kansei.tsukuba.ac.jp/doctor/kansei-design-studies}{Kansei Design Laboratory}} % This is used in the title page, print it elsewhere with \groupname
+\faculty{\href{http://www.kansei.tsukuba.ac.jp}{Doctoral Program in Kansei, Behavioral, and Brain Sciences}} % or Master's Program in Kansei, Behavioral, and Brain Sciences
 
 \AtBeginDocument{
 \hypersetup{pdftitle=\ttitle} % Set the PDF's title to your title
@@ -101,8 +99,9 @@ headsepline, % Uncomment to get a line under the header
 \begin{titlepage}
 	\begin{center}
 
-		\vspace*{.06\textheight}
-		{\scshape\LARGE \univname\par}\vspace{1.5cm} % University name
+		\vfill
+		%\vspace*{.04\textheight}
+		{\scshape\LARGE \univname\par}\vspace{1cm} % University name
 		\textsc{\Large Doctoral Thesis}\\[0.5cm] % Thesis type
 
 		\HRule \\[0.4cm] % Horizontal line
@@ -120,17 +119,18 @@ headsepline, % Uncomment to get a line under the header
 				\emph{Supervisor:} \\
 				\href{http://www.advisor.com}{\supname} % Supervisor name - remove the \href bracket to remove the link  
 			\end{flushright}
-		\end{minipage}\\[2.5cm]
+		\end{minipage}\\[1.5cm]
 		
 		\vfill
 
 		\large \textit{A thesis submitted in fulfillment of the requirements\\ for the degree of \degreename}\\[0.3cm] % University requirement text
-		\textit{in the}\\[0.4cm]
-		\facname\\\deptname\\[1.5cm] % Research group name and department name
+		\textit{in}\\[0.3cm]
+		\subjectname\\[1.5cm]
+		\deptname\\\facname\\[0.3cm] % Research group name and department name
 		
 		\vfill
 
-		{\large \today}\\[2cm] % Date
+		{\large \the\year{}}\\[1cm] % Date
 		%\includegraphics{Logo} % University/department logo - uncomment to place it
 		
 		\vfill
@@ -179,8 +179,21 @@ headsepline, % Uncomment to get a line under the header
 %----------------------------------------------------------------------------------------
 
 \begin{abstract}
-\addchaptertocentry{\abstractname} % Add the abstract to the table of contents
-The Thesis Abstract is written here (and usually kept to just this page). The page is kept centered vertically so can expand into the blank space above the title too\ldots
+	\addchaptertocentry{\abstractname} % Add the abstract to the table of contents
+	
+	The Thesis Abstract is written here (and usually kept to just this page). The page is kept centered vertically so can expand into the blank space above the title too.
+	
+	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ultricies lacinia euismod. Nam tempus risus in dolor rhoncus in interdum enim tincidunt. Donec vel nunc neque. In condimentum ullamcorper quam non consequat. Fusce sagittis tempor feugiat. Fusce magna erat, molestie eu convallis ut, tempus sed arcu. Quisque molestie, ante a tincidunt ullamcorper, sapien enim dignissim lacus, in semper nibh erat lobortis purus. Integer dapibus ligula ac risus convallis pellentesque.
+
+	Nunc posuere quam at lectus tristique eu ultrices augue venenatis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam erat volutpat. Vivamus sodales tortor eget quam adipiscing in vulputate ante ullamcorper. Sed eros ante, lacinia et sollicitudin et, aliquam sit amet augue. In hac habitasse platea dictumst.
+
+	Morbi rutrum odio eget arcu adipiscing sodales. Aenean et purus a est pulvinar pellentesque. Cras in elit neque, quis varius elit. Phasellus fringilla, nibh eu tempus venenatis, dolor elit posuere quam, quis adipiscing urna leo nec orci. Sed nec nulla auctor odio aliquet consequat. Ut nec nulla in ante ullamcorper aliquam at sed dolor. Phasellus fermentum magna in augue gravida cursus. Cras sed pretium lorem. Pellentesque eget ornare odio. Proin accumsan, massa viverra cursus pharetra, ipsum nisi lobortis velit, a malesuada dolor lorem eu neque.
+
+	Sed ullamcorper quam eu nisl interdum at interdum enim egestas. Aliquam placerat justo sed lectus lobortis ut porta nisl porttitor. Vestibulum mi dolor, lacinia molestie gravida at, tempus vitae ligula. Donec eget quam sapien, in viverra eros. Donec pellentesque justo a massa fringilla non vestibulum metus vestibulum. Vestibulum in orci quis felis tempor lacinia. Vivamus ornare ultrices facilisis. Ut hendrerit volutpat vulputate. Morbi condimentum venenatis augue, id porta ipsum vulputate in. Curabitur luctus tempus justo. Vestibulum risus lectus, adipiscing nec condimentum quis, condimentum nec nisl. Aliquam dictum sagittis velit sed iaculis. Morbi tristique augue sit amet nulla pulvinar id facilisis ligula mollis. Nam elit libero, tincidunt ut aliquam at, molestie in quam. Aenean rhoncus vehicula hendrerit.
+
+	\vspace*{1.5cm}
+	\textit{keywords: \keywordnames}
+
 \end{abstract}
 
 %----------------------------------------------------------------------------------------
